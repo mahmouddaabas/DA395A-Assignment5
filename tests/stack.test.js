@@ -17,3 +17,13 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+test('empty stack, add elements to it and find longest element', () => {
+    stack.emptyStack();
+    stack.push("Darth Vader");
+    stack.push("Yoda");
+    stack.push("Han Solo");
+    stack.push("Mando");
+    stack.push("Obi-Wan Kenobi");
+    expect(stack.findLongestElement()).toBe("Obi-Wan Kenobi")
+});
