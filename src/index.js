@@ -6,6 +6,7 @@ window.onload = function () {
     var pop = document.getElementById('pop');
     var push = document.getElementById('push');
     var peek = document.getElementById('peek');
+    var findLongestElement = document.getElementById('findLongestElement');
     var display = document.getElementById('top_of_stack');
 
     pop.addEventListener("click", function() {
@@ -21,5 +22,9 @@ window.onload = function () {
 
     peek.addEventListener("click", function() {
         display.innerHTML = stack.peek();
+    });
+
+    findLongestElement.addEventListener("click", function() {
+        display.innerHTML = stack.findLongestElement();
     });
 };
