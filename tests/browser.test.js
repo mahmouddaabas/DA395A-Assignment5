@@ -15,7 +15,7 @@ console.log(fileUnderTest);
 
 // Allra sist avslutar vi Firefox igen
 afterAll(async() => {
-    //await driver.quit();
+    await driver.quit();
 }, defaultTimeout);
 
 test('The stack should be empty in the beginning', async () => {
@@ -50,6 +50,6 @@ describe('Pusha still stacken sedan hitta längsta element', () => {
 		let findLongestElement = await driver.findElement(By.id('findLongestElement'));
 		await findLongestElement.click();
 		let display = await driver.findElement(By.id('top_of_stack')).getText();
-		expect(display).toEqual("Yoda");
+		expect(display).toEqual("Luke Skywalker");
 	});
 });
