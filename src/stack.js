@@ -16,3 +16,13 @@ exports.pop = function () {
 exports.peek = function () {
     return _.last(stack); // Det här är medvetet felaktigt
 }
+
+//Tömmer den existerade stacken
+exports.emptyStack = function() {
+    return stack;
+}
+
+//Returnerar det längsta elementet i stacken
+exports.findLongestElement = function() {
+    return _.sortBy(stack, 'length').reverse()[0];
+}
