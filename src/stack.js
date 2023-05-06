@@ -19,7 +19,7 @@ exports.peek = function () {
 
 //Tömmer den existerade stacken
 exports.emptyStack = function() {
-    return stack;
+    return stack = [];
 }
 
 //Returnerar det längsta elementet i stacken
